@@ -350,8 +350,8 @@ a {
 }
 
 .interactive-card img {
-    width: 110%;
-    height: 110%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
