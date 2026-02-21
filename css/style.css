@@ -337,3 +337,95 @@ a {
 }
 
 
+/* ================= INTERACTIVE CARD ================= */
+
+.interactive-card {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.interactive-card img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+/* Scale on hover */
+.interactive-card:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay text */
+.card-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    color: #ffffff;
+    transition: transform 0.2s ease;
+}
+
+.card-role {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.card-name {
+    font-size: 30px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+/* Gold name on hover */
+.interactive-card:hover .card-name {
+    color: #c8a95b;
+}
+
+.interactive-card.active {
+    transform: scale(1.05);
+}
+
+.interactive-card.active .card-name {
+    color: #c8a95b;
+}
+
+
+
+/* ================= SECRETARY GENERAL LETTER ================= */
+
+.sg-letter-section {
+    background-color: #ffffff;
+}
+
+.sg-letter-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.sg-divider {
+    height: 3px;
+    width: 100%;
+    background-color: #c8a95b;
+    margin: 30px 0 40px 0;
+}
+
+.sg-letter-content {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555555;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.sg-letter-content p {
+    margin-bottom: 20px;
+}

@@ -85,3 +85,46 @@ document.addEventListener("DOMContentLoaded", function () {
     const interval = setInterval(updateCountdown, 1000);
 
 });
+
+
+
+// ================= INTERACTIVE CARD PAN =================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cards = document.querySelectorAll(".interactive-card");
+
+    cards.forEach(card => {
+
+        const img = card.querySelector("img");
+        const overlay = card.querySelector(".card-overlay");
+
+        card.addEventListener("mousemove", (e) => {
+
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const moveX = (x - centerX) / 20;
+            const moveY = (y - centerY) / 20;
+
+            img.style.transform = `translate(${-moveX}px, ${-moveY}px) scale(1.1)`;
+            overlay.style.transform = `translate(${-moveX / 2}px, ${-moveY / 2}px)`;
+        });
+
+        card.addEventListener("mouseleave", () => {
+            img.style.transform = "translate(0, 0) scale(1)";
+            overlay.style.transform = "translate(0, 0)";
+        });
+
+        // Mobile tap activation
+        card.addEventListener("click", () => {
+            card.classList.toggle("active");
+        });
+
+    });
+
+});
