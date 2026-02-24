@@ -128,3 +128,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+
+
+// ================= HEADER AND FOOTER =================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    function loadComponent(url, elementId) {
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to load " + url);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            })
+            .catch(error => console.error(error));
+    }
+
+    loadComponent("/components/header.html", "header");
+    loadComponent("/components/footer.html", "footer");
+
+});

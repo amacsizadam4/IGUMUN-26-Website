@@ -238,11 +238,12 @@ a {
 }
 
 .btn-discover {
-    background: transparent;
-    color: #000;
+    background-color: #242e51;
+    color: #ffffff;
     border: none;
+    border-radius: 20px;
     padding: 12px 24px;
-    font-weight: 500;
+    font-weight: 200;
 }
 
 @media (max-width: 767px) {
@@ -580,3 +581,7 @@ a {
     }
 }
 
+
+#header {
+    min-height: 130px;
+}
