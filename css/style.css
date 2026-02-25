@@ -1,3 +1,6 @@
+
+/* ================= HEADER ================= */
+
 /* Base */
 body {
     font-family: 'Inter', sans-serif;
@@ -57,6 +60,62 @@ a {
 
 .navbar-toggler:focus {
     box-shadow: none;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown-menu {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 10px 0;
+}
+
+.dropdown-item {
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f8;
+    color: #c8a95b;
+}
+
+
+
+/* Remove Bootstrap dropdown arrow */
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+/* Custom animated arrow */
+.team-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Create arrow using border */
+.custom-arrow {
+    width: 6px;
+    height: 6px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg); /* Down */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    margin-top: -2px;
+}
+
+/* Rotate when open */
+.team-toggle[aria-expanded="true"] .custom-arrow {
+    transform: rotate(-135deg); /* Up */
+}
+
+/* Match gold hover */
+.team-toggle:hover .custom-arrow {
+    border-color: #c8a95b;
 }
 
 /* ================= FOOTER ================= */
@@ -255,7 +314,7 @@ a {
 
     .btn-apply,
     .btn-discover {
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
 }

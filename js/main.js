@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const conferenceDate = new Date("2026-07-06T12:00:00").getTime();
+    const conferenceDate = new Date("2026-05-06T12:00:00").getTime();
 
     const daysEl = document.getElementById("days");
     const hoursEl = document.getElementById("hours");
