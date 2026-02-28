@@ -198,6 +198,7 @@ function loadLayoutComponents() {
 
     loadComponent("/components/header.html", "header");
     loadComponent("/components/footer.html", "footer");
+    loadComponent("/components/committees_template.html", "committees");
 
 }
 
@@ -207,15 +208,15 @@ function loadComponent(url, elementId) {
 
     fetch(url)
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to load ${url}`);
-            }
+            if (!response.ok) throw new Error(`Failed to load ${url}`);
             return response.text();
         })
         .then(html => {
             container.innerHTML = html;
+
+            if (elementId === "committees") {
+                initInteractiveCards();
+            }
         })
-        .catch(error => {
-            console.error(error);
-        });
+        .catch(error => console.error(error));
 }
