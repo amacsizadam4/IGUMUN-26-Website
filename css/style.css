@@ -456,6 +456,10 @@ a {
     transform: scale(1.05);
 }
 
+.interactive-card.darkened img {
+    filter: brightness(80%);
+}
+
 
 
 /* ================= SECRETARY GENERAL LETTER ================= */
