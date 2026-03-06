@@ -460,6 +460,84 @@ a {
     filter: brightness(80%);
 }
 
+.committee-card-link {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    color: inherit;
+}
+
+.committee-card-link:hover {
+    color: inherit;
+}
+
+
+
+/* ================= COMMITTEE DETAIL ================= */
+
+.committee-detail-section {
+    padding: 72px 0;
+}
+
+.committee-detail-image {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+.committee-detail-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.committee-detail-meta {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.committee-agenda-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+.committee-agenda-list {
+    margin: 0 0 10px 0;
+    padding-left: 20px;
+    color: #555555;
+    line-height: 1.7;
+}
+
+.committee-detail-section .btn-committee {
+    background-color: #242e51;
+    color: #ffffff;
+    border: none;
+    border-radius: 999px;
+    padding: 12px 22px;
+    font-weight: 600;
+}
+
+.committee-detail-section .btn-committee:hover {
+    background-color: #c8a95b;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .committee-detail-title {
+        font-size: 32px;
+    }
+
+    .committee-detail-section {
+        padding: 48px 0;
+    }
+}
+
 
 
 /* ================= SECRETARY GENERAL LETTER ================= */
